@@ -20,7 +20,6 @@ ul li {
 }
 
 /* Banner */
-header { height: 100px;}
 .nav {
     height: 100px;
     display: flex;
@@ -50,9 +49,8 @@ header { height: 100px;}
     height: 800px;
     background-image: url(../images/banner.jpg);
 }
-
 #banner-txt {
-    padding: 200px 10px 0 850px;
+    padding: 300px 10px 0 850px;
     white-space: nowrap;
 }
 #banner-txt p {
@@ -96,13 +94,14 @@ header { height: 100px;}
 }
 .new-subtxt {
     font-size: 28px;
+    padding-left: 10px;
 }
 #new-txt > p {
     font-family: 'Gothic A1', sans-serif;
     font-size: 22px;
     font-weight: 500;
     line-height: 38px;
-    padding: 10px 0 0 0;
+    padding: 50px 0 0 0;
 }
 .more-btn01 {
     width: 170px;
@@ -179,8 +178,10 @@ header { height: 100px;}
     height: 65px;
     border-radius: 35px;
     background-color: #cc7968;
-    border: 0;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .more-btn02:hover::after {
     content: "";
@@ -283,11 +284,3 @@ header { height: 100px;}
     font-size: 15px;
     font-weight: 500;
 }
-
-
-
-
-
-
-
-

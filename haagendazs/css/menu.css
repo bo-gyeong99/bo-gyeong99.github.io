@@ -133,7 +133,11 @@ ul li {
     height: 25px;
     border-radius: 12.5px;
     background-color: #40061e;
-    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more-btn span {
     color: #fff;
     font-size: 14px;
     font-family: 'Gothic A1', sans-serif;
@@ -167,6 +171,3 @@ ul li {
     font-size: 15px;
     font-weight: 500;
 }
-
-
-
