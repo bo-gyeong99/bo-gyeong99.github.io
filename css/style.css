@@ -203,13 +203,31 @@ ul.menu > li:first-child { border-left: none; }
 /* ----- PROFILE ----- */
 #profile { height: 700px; margin-top: 150px; }
 #profile-content{
-    margin: 70px 50px 0 50px;
     display: flex;
+    justify-content: center;
+    margin-top: 80px;
 }
-#photo > img {
+#photo {
+    margin-right: 100px;
+    position: relative;
+}
+#photo-bg1 {
     width: 500px;
     height: 500px;
-    margin: 0 70px 0 100px;
+    background-image: url(../images/yellow_bg.png);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+}
+#photo-bg2 {
+    width: 500px;
+    height: 501px;
+    background-image: url(../images/blue_bg.png);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: -2;
 }
 #aboutme, #skill { 
     width: 460px;  
