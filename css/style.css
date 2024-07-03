@@ -291,7 +291,7 @@ ul {
     height: 530px;
     background-color: #fed690;
     border-radius: 15px;
-    margin: 50px auto;
+    margin: 75px auto;
     position: relative;
     padding: 50px 30px;
     /* display: flex;
@@ -482,7 +482,7 @@ a.webbtn {
     padding-top: 180px; 
 } */
 #design-content {
-    margin-top: 50px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
 }
