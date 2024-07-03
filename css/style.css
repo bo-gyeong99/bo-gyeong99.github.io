@@ -10,6 +10,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
     overflow-x: hidden;         /* 가로 스크롤 안보이게 */
+    height: 100%;
 }
 a { text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
@@ -18,7 +19,7 @@ a:link { color: black; text-decoration: none;}
 
 /* HOME */
 #home {
-    height: 700px;
+    height: 750px;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -140,7 +141,7 @@ a:link { color: black; text-decoration: none;}
 #subtitle p {
     font-size: 20px;
     margin: 0;
-    padding-right: 20%;
+    padding-right: 300px;
     white-space: nowrap;
     animation: scroll-text 8s linear infinite;
 }
@@ -201,34 +202,19 @@ ul.menu > li:first-child { border-left: none; }
 
 
 /* ----- PROFILE ----- */
-#profile { height: 700px; margin-top: 150px; }
+.section {
+    padding-top: 200px;
+}
 #profile-content{
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 #photo {
-    margin-right: 100px;
+    margin: 0 100px;
     position: relative;
 }
-#photo-bg1 {
-    width: 500px;
-    height: 500px;
-    background-image: url(../images/yellow_bg.png);
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: -1;
-}
-#photo-bg2 {
-    width: 500px;
-    height: 501px;
-    background-image: url(../images/blue_bg.png);
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: -2;
-}
+
 #aboutme, #skill { 
     width: 460px;  
     padding: 20px;
@@ -254,98 +240,50 @@ ul {
 #skill > ul > li {
     padding: 30px 0;
 }
-#skill ul { position: relative; }
-#skill .hc-line::after {
+
+#skill { 
+    position: relative;
+}
+#line {
+    position: absolute;
+    top: 140px;
+    left: 180px;
+}
+#line .hc-line::after {
     content: "";
     width: 250px; 
     height: 18px;
     background-color: #fed690;
     border-radius: 10px;
     position: absolute;
-    top: 40px;
-    right: 50px;
 } 
-#skill .js-line::after {
+#line .js-line::after {
     content: "";
     width: 210px; 
     height: 18px;
     background-color: #fed690;
     border-radius: 10px;
     position: absolute;
-    top: 130px;
-    right: 90px;
+    top: 90px;
 } 
-#skill .ph-line::after {
+#line .ph-line::after {
     content: "";
     width: 170px; 
     height: 18px;
     background-color: #fed690;
     border-radius: 10px;
     position: absolute;
-    top: 210px;
-    right: 130px;
+    top: 180px;
 } 
-#skill .ai-line::after {
+#line .ai-line::after {
     content: "";
     width: 190px; 
     height: 18px;
     background-color: #fed690;
     border-radius: 10px;
     position: absolute;
-    top: 290px;
-    right: 110px;
+    top: 260px;
 }
-
-/* ----- PORTFOLIO ----- */
-#portfolio { 
-    height: 700px; 
-    margin-top: 150px;
-}
-
-/* portfolio btn */
-.pt-btn{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100px;
-    left: -90px;
-}
-.btn1 {
-    width: 100px;
-    height: 100px;
-    background-image: url(../images/red-01.png);
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-}
-.btn1:hover { background-image: url(../images/red-02.png); }
-.btn2 {
-    width: 100px;
-    height: 100px;
-    background-image: url(../images/yellow-01.png);
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;  
-}
-.btn2:hover { background-image: url(../images/yellow-02.png); }
-.btn3 {
-    width: 100px;
-    height: 100px;
-    background-image: url(../images/green-01.png);
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;  
-}
-.btn3:hover { background-image: url(../images/green-02.png); }
-.btn4 {
-    width: 100px;
-    height: 100px;
-    background-image: url(../images/purple-01.png); 
-    background-color: transparent;
-    border: 0;  
-    cursor: pointer;
-}
-.btn4:hover { background-image: url(../images/purple-02.png); }
 
 
 .pt-box {
@@ -372,7 +310,6 @@ ul {
 }
 .pt {
     display: flex;
-    /* display: none; */
 }
 .pt.hidden {
     display: none;
@@ -419,33 +356,48 @@ ul {
 .pt-02 .color-box:nth-child(4) { background-color: #232139; }   
 .pt-02 .color-box:nth-child(5) { background-color: #f2b749; }
 
-.pt-03 .color-box:nth-child(2) { background-color: #09337f; }
-.pt-03 .color-box:nth-child(3) { background-color: #68696f; }
-.pt-03 .color-box:nth-child(4) { background-color: #00184a; }   
-.pt-03 .color-box:nth-child(5) { background-color: #eeeeee; }
+.pt-03 .color-box:nth-child(2) { background-color: #f2e8de; }
+.pt-03 .color-box:nth-child(3) { background-color: #1ba0da; }
+.pt-03 .color-box:nth-child(4) { background-color: #333333; }   
+.pt-03 .color-box:nth-child(5) { background-color: #fdfbf7; }
 
-.pt-04 .color-box:nth-child(2) { background-color: #bbafa3; }
-.pt-04 .color-box:nth-child(3) { background-color: #f4040d; }
-.pt-04 .color-box:nth-child(4) { background-color: #4759a5; }   
-.pt-04 .color-box:nth-child(5) { background-color: #cd1f4f; }
+.pt-04 .color-box:nth-child(2) { background-color: #09337f; }
+.pt-04 .color-box:nth-child(3) { background-color: #68696f; }
+.pt-04 .color-box:nth-child(4) { background-color: #00184a; }   
+.pt-04 .color-box:nth-child(5) { background-color: #eeeeee; }
 
+/* portfolio btn */
+.pt-btn{
+    display: flex;
+    position: absolute;
+    bottom: -78px;
+    right: 0;
+}
+.pt-btn > button {
+    margin-right: 25px;
+    border: 0;
+    background-image: url(../images/portfoliobtn-01.png);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.pt-btn > button:focus {
+    background-image: url(../images/portfoliobtn-02.png);
+}
+
+a {
+    cursor: pointer;
+}
 a.webbtn {
     width: 200px;
-    height: 100px;
-    background-image: url(../images/websitebutton-01.png);
+    height: 70px;
+    background-image: url(../images/websitebtn-01.png);
     position: absolute;
     top: 400px; 
     left: 280px;  
 }
-.webbtn:hover { background-image: url(../images/websitebutton-02.png); }
-.webbtn > span {
-    position: absolute;
-    top: 35px; 
-    left: 50px;  
-    color: #232139;
-    font-size: 15px;
-    white-space: nowrap;
-}
+.webbtn:hover { background-image: url(../images/websitebtn-02.png); }
+
 .monitor {
     width: 600px;
     margin-top: 20px;    
@@ -472,19 +424,20 @@ a.webbtn {
     position: absolute;
     top: 0;
     left: 0;
-    transition: top 8s ease-in-out;
+    transition:
+     top 8s ease-in-out;
 }
 .pt-01 .monitor:hover .screen > img {
     top: -845px;
 }
 .pt-02 .monitor:hover .screen > img {
-    top: -845px;
+    top: -850px;
 }
 .pt-03 .monitor:hover .screen > img {
-    top: -695px;
+    top: -708px;
 }
 .pt-04 .monitor:hover .screen > img {
-    top: -542px;
+    top: -685px;
 }
 #mouse {
     width: 120px;
@@ -524,10 +477,10 @@ a.webbtn {
 }
 
 /* ----- DESIGN ----- */
-#design { 
-    height: 700px;
-    margin-top: 150px;
-}
+/* #design { 
+    height: 750px;
+    padding-top: 180px; 
+} */
 #design-content {
     margin-top: 50px;
     display: flex;
@@ -614,8 +567,8 @@ a.webbtn {
 
 /* ----- CONTACT ----- */
 #contact {
-    height: 700px;
-    margin-top: 150px;
+    height: 750px;
+    margin-top: 150px; 
 
     /* 체크배경 */
     background-image:
@@ -633,7 +586,7 @@ footer > .menu {
 #contact h1 {
     font-family: 'Shrikhand', cursive;
     font-size: 430px;
-    color: #232139;
+    color: #232139; 
     opacity: 35%;
 }
 #contact-content { 

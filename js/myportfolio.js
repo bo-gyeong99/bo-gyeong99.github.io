@@ -121,4 +121,3 @@ modal.addEventListener('click', e => {
 modalImg.addEventListener('click', () => {
     closeModal();
   });
-
